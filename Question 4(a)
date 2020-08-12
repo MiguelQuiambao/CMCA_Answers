@@ -1,0 +1,21 @@
+number = input ('Enter a number you would to convert(Enter nothing to Exit): ');
+
+while isempty(number) ~=true
+  conversion_choice = input ('DR (D to R) or RD (R to D): ', 's');
+  
+  if (strcmp(conversion_choice, 'RD')==true)
+    converted_value = (pi/180) * number;
+    
+    fprintf ('%d R is %d D\n', number, converted_value);
+  else
+    converted_value = (180/pi) * number;
+    
+    fprintf ('%d D is %d R\n', number, converted_value);
+    
+  endif
+  
+  number = input('Enter a number you would like to convert(Enter nothing to Exit): ');
+  
+endwhile
+
+fprintf ('Thank you for using the program, have a nice day!\n');
