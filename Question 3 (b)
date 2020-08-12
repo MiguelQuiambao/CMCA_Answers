@@ -1,6 +1,0 @@
-Radius = input ('Please Enter Radius: ');
-Gravity = 9.8;
-
-Velocity = sqrt (Gravity .* Radius);
-
-fprintf ('The minimum speed of the block has to be %d\n m/s', Velocity);
