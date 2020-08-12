@@ -1,0 +1,47 @@
+
+name = input ('Enter your name: ', 's');
+address = input ('Enter address: ', 's');
+amountOfPurchase = input ('Enter amount of purchase: ');
+typeOfPurchase = input ('Enter type of purchase (L for Laptop / D for Desktop): ', 's'); 
+  
+  discountLaptop = 0;
+  discountDesktop = 0;
+ 
+if ((typeOfPurchase ~= 'L') && (typeOfPurchase ~= 'D'))
+  fprintf ('Invalid type of code\n');
+  
+else
+  if (strcmp(amountOfPurchase, '<251')==true)
+    discountLaptop = discountLaptop + 0;
+    discountDesktop = discountDesktop + 0.05;
+  
+elseif (strcmp(amountOfPurchase, '<570')==true)
+  discountLaptop = 0.05;
+  discountDesktop = 0.076;
+  
+elseif (strcmp(amountOfPurchase, '<1000')==true)
+  discountLaptop = 0.075;
+  discountDesktop = 0.10;
+else (strcmp(amountOfPurchase, '>1000')==true)
+  discountLaptop = 0.10;
+  discountDesktop = 0.15;
+end
+
+
+  if (strcmp(typeOfPurchase, '=L')==true) 
+     discount =(discountLaptop/100)*amountOfPurchase;
+     netAmount = amountOfPurchase - discount;
+     
+elseif (strcmp(typeOfPurchase, '=D')==true)
+  discount =(discountDesktop/100)*amountOfPurchase;
+  netAmount = amountOfPurchase - discount;
+  
+  
+  fprintf ('Net amount: %d\n', netAmount); 
+  
+end
+
+
+end 
+
+fprintf ('Thank you for using the program\n');
