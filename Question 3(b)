@@ -1,0 +1,6 @@
+radius = input ('Please Enter Radius: ');
+gravity = 9.8;
+
+velocity = sqrt (gravity .* radius);
+
+fprintf ('The minimum speed of the block has to be %d\n m/s', velocity);
